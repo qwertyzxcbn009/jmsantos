@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+body{
+    background: #000000;
+    color: #fff;
+}
+
+nav ul{
+    display: flex;
+    gap: 50px;
+    justify-content: end;
+    padding-right: 30px;
+    align-items: center;
+    height: 100px;
+    
+}
+
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.mainview{
+    margin-top: 1100px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
+.about{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 2em;
+}
+.about .img-about{
+    text-align: center;
+    position: relative;
+    margin-left: 5%;
+}
+.about .img-about img{
+    max-width: 400px;
+    height: auto;
+}
+.about-content{
+    font-weight: 700;
+
+}
+
+.img img {
+    height: 90%;
+    position: absolute;
+    left: 60%;
+    bottom: 0%;
+    
+}
+.skills{
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+}
+.skill-name{
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.skill-bar{
+    height: 14px;
+    background: whitesmoke;
+    border-radius: 3px;
+}
+.skill-per{
+    height: 14px;
+    background: red;
+    border-radius: 3px;
+    position: relative;
+    animation: fillbars 2.5s 1;
+}
+.skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background: red;
+    border-radius: 4px;
+    font-size: 12px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+.skill-per::after{
+
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #f1f1f1;
+    top: -20px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+}
+@keyframes fillbars{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
